@@ -1,0 +1,24 @@
+{
+  "name": "i-can-has-burgerz",
+  "version": "1.0.0",
+  "description": "\"App for cats who want to track burgers they want to eat, and burgers they have eaten\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfkestner/I-Can-Has-Burgerz.git"
+  },
+  "author": "Dorotea Flores-Kestner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dfkestner/I-Can-Has-Burgerz/issues"
+  },
+  "homepage": "https://github.com/dfkestner/I-Can-Has-Burgerz#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
+  }
+}
