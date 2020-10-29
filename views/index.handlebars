@@ -4,10 +4,14 @@
         <div class="col">
             <h4>Burgerz I No Eated...</h4>
             <div>
-                <ul>
+                <ul style="list-style-type:none;">
                     {{#each burgers}}
                     {{#unless devoured}}
-                    {{burgers devoured=true}}
+                        <li>
+                            <p><span class="label">{{this.id}}. {{this.burger_name}}</span>
+                            <button data-id="{{this.id}}" type="submit" class="devoured">EAT IT!</button>
+                            </p>
+                        </li>
                     {{/unless}}
                     {{/each}}
                 </ul>
@@ -16,10 +20,12 @@
         <div class="col">
             <h4>Burgerz I Eated!</h4>
             <div>
-                <ul>
+                <ul style="list-style-type:none;">
                     {{#each burgers}}
                     {{#if devoured}}
-                    {{burgers devoured=false}}
+                        <li>
+                            <p>{{this.id}}. {{this.burger_name}}</p>
+                        </li>
                     {{/if}}
                     {{/each}}
                 </ul>
