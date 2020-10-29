@@ -7,7 +7,12 @@
                 <ul style="list-style-type:none;">
                     {{#each burgers}}
                     {{#unless devoured}}
-                    {{> burgers/burger-block devoured=true}}
+                    <li>
+	                    {{id}}. {{burger_name}}
+                        <button class="devour" data-id="{{id}}" data-devour="{{devoured}}">
+		                I CAN HAS?
+                        </button>
+                    </li>
                     {{/unless}}
                     {{/each}}
                 </ul>
@@ -19,7 +24,9 @@
                 <ul style="list-style-type:none;">
                     {{#each burgers}}
                     {{#if devoured}}
-                    {{> burgers/burger-block devoured=false}} 
+                    <li>
+	                    {{id}}. {{burger_name}}
+                    </li> 
                     {{/if}}
                     {{/each}}
                 </ul>

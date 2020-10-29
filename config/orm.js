@@ -73,20 +73,6 @@ const orm = {
             cb(result);
         });
     },
-    deleteOne: function(table, condition, cb) {
-        let queryString = "DELET FROM " + table;
-        
-        queryString += " WHERE ";
-        queryString += condition;
-
-        console.log(queryString);
-        connection.query(queryString, function(err, result) {
-            if (err) {
-                throw err;
-            }
-            cb(result);
-        });
-    }
 };
 
 module.exports = orm;
