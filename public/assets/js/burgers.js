@@ -1,7 +1,7 @@
 $(function() {
     $(".devour").on("click", function() {
         let id = $(this).data("id");
-        let devour = true;
+        let devour = $(this).data("devour");
         console.log(id)
         console.log(devour)
 
@@ -13,7 +13,7 @@ $(function() {
             type: "PUT",
             data: devouredStatus
         }).then(function() {
-            console.log(data);
+            console.log(devour);
             location.reload();
         });
     });
