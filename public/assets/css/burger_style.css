@@ -1,0 +1,38 @@
+* {
+    font-family: 'Syne Mono', monospace;
+
+}
+
+.jumbotron {
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 3px 5px 0px #000000;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 0;
+    border-bottom: 10px solid black;
+    background-image: url("/assets/img/burgers.jpeg");
+    background-size: cover;
+}
+
+body {
+    background-color: rgb(241, 226, 137);
+}
+
+h1 {
+    text-align:center;
+}
+
+h4 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+.devour {
+    float:right;
+}
+
+
+

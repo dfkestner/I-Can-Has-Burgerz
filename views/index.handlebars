@@ -1,48 +1,72 @@
 <div class="container">
-    <h1>I Can Has Burgerz!</h1>
-    <div class="row">
+    <div class="col">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">I Can Has Burgerz!</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card" style="width:22rem;">
+                <img src="../assets/img/moreBurgerz.jpg" class="card-img-top brgzjpg" alt="More Burgerz!">
+                <div class="card-body text-center alert-success">
+                    <h5 class="card-title">More Burgerz Plz!</h5>
+                    <p class="card-text">Human plz put burgerz in box so I can has?</p>
+                        <form class="create-form">
+                        <div class="form-group">
+                            <input type="text" id="burgerz" name="burger_name">
+                            </div>
+                            <button type="submit" class="btn btn-success">Gimme!</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row justify-content-center">
         <div class="col">
             <h4>Burgerz I No Eated...</h4>
-            <div>
-                <ul style="list-style-type:none;">
-                    {{#each burgers}}
-                    {{#unless devoured}}
-                    <li>
-	                    {{id}}. {{burger_name}}
-                        <button class="devour" data-id="{{id}}" data-devour="{{devoured}}">
-		                I CAN HAS?
-                        </button>
-                    </li>
-                    {{/unless}}
-                    {{/each}}
-                </ul>
+            <div class="row justify-content-center">
+                <div class="card" style="width: 22rem;">
+                    <img src="../assets/img/noEated.jpeg" class="card-img-top noEat" alt="Sad Cat">
+                    <div class="card-body text-center alert-warning">
+                        <ul class="list-group list-group-flush">
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            <li class="noEatz">
+                                <div class="list-group-item text-center">
+                                    {{id}}. {{burger_name}}
+                                    <button class="devour btn btn-warning btn-sm text-white" data-id="{{id}}" data-devour="{{devoured}}">
+                                    I CAN HAS?
+                                    </button>
+                                </div>
+                            </li>
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col">
             <h4>Burgerz I Eated!</h4>
-            <div>
-                <ul style="list-style-type:none;">
-                    {{#each burgers}}
-                    {{#if devoured}}
-                    <li>
-	                    {{id}}. {{burger_name}}
-                    </li> 
-                    {{/if}}
-                    {{/each}}
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h4>Can Has More Burgerz?</h4>
-            <form class="create-form">
-                <div class="form-group">
-                    <label for="burgerz">Add More Burgerz:</label>
-                    <input type="text" id="burgerz" name="burger_name">
+            <div class="row justify-content-center">
+                <div class="card" style="width: 22rem;">
+                    <img src="../assets/img/fatcat.jpeg" class="card-img-top fatCat" alt="Fat Cat">
+                    <div class="card-body text-center alert-primary">
+                        <ul class="list-group list-group-flush">
+                            {{#each burgers}}
+                            {{#if devoured}}
+                            <li>
+                                <div class="list-group-item text-center">
+                                    {{id}}. {{burger_name}}
+                                </div>                                
+                            </li> 
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
                 </div>
-                <button type="submit">Add Burger!</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
