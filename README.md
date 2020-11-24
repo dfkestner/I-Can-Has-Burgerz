@@ -6,6 +6,8 @@
 
 The #1 app for cats who want to keep track of burgers they want to have and burgers they have already eaten, using MySQL, Node, Express, Handlebars, ORM, and Heroku.
 
+![I Can Has Burgerz Screen Shot](https://github.com/dfkestner/I-Can-Has-Burgerz/blob/main/burgerz.png)
+
 ## Table of Contents
 
 * [Installation](#installation)
